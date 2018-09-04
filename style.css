@@ -23,7 +23,7 @@ html {
   background-color: #0000FF;
 }
 
-.opr, #clear, #equal {
+.opr, #ac, #c, #equal {
   background-color: #0066ff;
 }
 
@@ -35,7 +35,7 @@ html {
 .purple .result {
   background-color: #884dff;
 }
-.purple .opr, .purple #clear, .purple #equal {
+.purple .opr, .purple #ac, .purple #c, .purple #equal {
   background-color: #9966ff;
 }
 .purple .num {
@@ -103,17 +103,23 @@ html {
 
 .opr,
 .num,
-#equal {
+#equal,
+#c {
   width: 25%;
 }
 
-#clear {
+#ac {
   width: 50%;
-  filter: opacity(90%);
 }
 
-#equal {
+#ac, #c, #equal {
   filter: opacity(90%);
+}
+#ac:hover, #c:hover, #equal:hover {
+  filter: opacity(85%);
+}
+#ac:active, #c:active, #equal:active {
+  filter: opacity(80%);
 }
 
 /* RWD for mobile phones */

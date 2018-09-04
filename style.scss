@@ -19,7 +19,7 @@ html {
   background-color: $color-blue;
 }
 
-.opr, #clear, #equal {
+.opr, #ac, #c, #equal {
   background-color: $color-blue-opr;
 }
 
@@ -33,7 +33,7 @@ html {
     background-color: $color-purple;
   }
 
-  .opr, #clear, #equal {
+  .opr, #ac, #c, #equal {
     background-color: $color-purple-opr;
   }
   
@@ -43,7 +43,6 @@ html {
 }
 
 /* Theme buttons */
-
 .navbar {
   display: flex;
   margin: 0 auto;
@@ -111,17 +110,25 @@ html {
 
 .opr, 
 .num,
-#equal {
+#equal,
+#c {
   width: 25%;
 }
 
-#clear {
+#ac {
   width: 50%;
-  filter: opacity(90%);
 }
 
-#equal {
+#ac, #c, #equal {
   filter: opacity(90%);
+
+  &:hover {
+    filter: opacity(85%);
+  }
+
+  &:active {
+    filter: opacity(80%);
+  }
 }
 
 /* RWD for mobile phones */
