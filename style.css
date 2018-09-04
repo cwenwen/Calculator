@@ -23,7 +23,7 @@ html {
   background-color: #0000FF;
 }
 
-.opr, .clear {
+.opr, #clear, #equal {
   background-color: #0066ff;
 }
 
@@ -35,7 +35,7 @@ html {
 .purple .result {
   background-color: #884dff;
 }
-.purple .opr, .purple .clear {
+.purple .opr, .purple #clear, .purple #equal {
   background-color: #9966ff;
 }
 .purple .num {
@@ -102,12 +102,17 @@ html {
 }
 
 .opr,
-.num {
+.num,
+#equal {
   width: 25%;
 }
 
-.clear {
+#clear {
   width: 50%;
+  filter: opacity(90%);
+}
+
+#equal {
   filter: opacity(90%);
 }
 
