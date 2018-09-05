@@ -112,44 +112,41 @@ q('.btn').addEventListener('click', e => {
     }
 
     // Decide the length of result to display
-    if (rawResult.toString().length <= 10) {
+    if (rawResult.toString().length <= 9) {
       q('.result-output').innerText = rawResult;
     
-    // Format rawResult using fixed-point notation
+    // Format rawResult using the toFixed() method
     } else {
       switch (parseInt(rawResult).toString().length) {
-        case 10:
+        case 9:
           q('.result-output').innerText = Math.round(rawResult);
           break;
-        case 9:
+        case 8:
           q('.result-output').innerText = rawResult.toFixed(1);
           break;
-        case 8:
+        case 7:
           q('.result-output').innerText = rawResult.toFixed(2);
           break;
-        case 7:
+        case 6:
           q('.result-output').innerText = rawResult.toFixed(3);
           break;
-        case 6:
+        case 5:
           q('.result-output').innerText = rawResult.toFixed(4);
           break;
-        case 5:
+        case 4:
           q('.result-output').innerText = rawResult.toFixed(5);
           break;
-        case 4:
+        case 3:
           q('.result-output').innerText = rawResult.toFixed(6);
           break;
-        case 3:
+        case 2:
           q('.result-output').innerText = rawResult.toFixed(7);
           break;
-        case 2:
+        case 1:
           q('.result-output').innerText = rawResult.toFixed(8);
           break;
-        case 1:
-          q('.result-output').innerText = rawResult.toFixed(9);
-          break;
 
-        // If rawResult > billion 
+        // If rawResult > 9 digits 
         default: 
           q('.result-output').innerText = 'error';
           break;
