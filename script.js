@@ -91,23 +91,69 @@ q('.btn').addEventListener('click', e => {
   // Press 'equal'
   if (e.target.id === 'equal') {
 
+    let rawResult;
     switch (operator) {
       case '+':
         q('.result-input').innerText = operand + '+' + q('.result-output').innerText;
-        q('.result-output').innerText = parseFloat(operand) + parseFloat(q('.result-output').innerText);
+        rawResult = parseFloat(operand) + parseFloat(q('.result-output').innerText);
         break;
       case '−':
         q('.result-input').innerText = operand + '−' + q('.result-output').innerText;
-        q('.result-output').innerText = parseFloat(operand) - parseFloat(q('.result-output').innerText);
+        rawResult = parseFloat(operand) - parseFloat(q('.result-output').innerText);
         break;
       case '×':
         q('.result-input').innerText = operand + '×' + q('.result-output').innerText;
-        q('.result-output').innerText = parseFloat(operand) * parseFloat(q('.result-output').innerText);
+        rawResult = parseFloat(operand) * parseFloat(q('.result-output').innerText);
         break;
       case '÷':
         q('.result-input').innerText = operand + '÷' + q('.result-output').innerText;
-        q('.result-output').innerText = parseFloat(operand) / parseFloat(q('.result-output').innerText);
+        rawResult = parseFloat(operand) / parseFloat(q('.result-output').innerText);
         break;
+    }
+
+    // Decide the length of result to display
+    if (rawResult.toString().length <= 10) {
+      q('.result-output').innerText = rawResult;
+    
+    // Format rawResult using fixed-point notation
+    } else {
+      switch (parseInt(rawResult).toString().length) {
+        case 10:
+          q('.result-output').innerText = Math.round(rawResult);
+          break;
+        case 9:
+          q('.result-output').innerText = rawResult.toFixed(1);
+          break;
+        case 8:
+          q('.result-output').innerText = rawResult.toFixed(2);
+          break;
+        case 7:
+          q('.result-output').innerText = rawResult.toFixed(3);
+          break;
+        case 6:
+          q('.result-output').innerText = rawResult.toFixed(4);
+          break;
+        case 5:
+          q('.result-output').innerText = rawResult.toFixed(5);
+          break;
+        case 4:
+          q('.result-output').innerText = rawResult.toFixed(6);
+          break;
+        case 3:
+          q('.result-output').innerText = rawResult.toFixed(7);
+          break;
+        case 2:
+          q('.result-output').innerText = rawResult.toFixed(8);
+          break;
+        case 1:
+          q('.result-output').innerText = rawResult.toFixed(9);
+          break;
+
+        // If rawResult > billion 
+        default: 
+          q('.result-output').innerText = 'error';
+          break;
+      }
     }
   }
 
