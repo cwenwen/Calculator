@@ -46,7 +46,7 @@ html {
 .navbar {
   display: flex;
   margin: 0 auto;
-  width: 360px;
+  width: 320px;
   background-color: #404040;
 }
 .navbar div {
@@ -64,18 +64,19 @@ html {
 .wrapper {
   position: relative;
   margin: 0 auto;
-  width: 360px;
+  width: 320px;
+  height: 520px;
 }
 
 .result {
   position: absolute;
   width: 100%;
-  height: 170px;
+  height: 120px;
   text-align: end;
 }
 .result * {
   width: 90%;
-  margin: 5%;
+  margin: 3%;
   overflow: hidden;
 }
 .result-output {
@@ -84,13 +85,14 @@ html {
 
 .btn {
   position: absolute;
-  top: 170px;
+  top: 120px;
   width: 100%;
+  height: 400px;
 }
 .btn-row {
   display: flex;
   height: 20%;
-  line-height: 90px;
+  line-height: 80px;
   text-align: center;
 }
 .btn-row div:hover {
