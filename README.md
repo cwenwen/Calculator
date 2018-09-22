@@ -17,7 +17,7 @@ The first (incomplete) practice is [here](https://lidemy.github.io/mentor-progra
 
 * Operations between 2 numbers
 
-* Result in 9 digits
+* Results in 9 digits
   
 If the result has more than 9 digits before the decimal point, it shows "error".
   
