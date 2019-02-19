@@ -1,5 +1,7 @@
 # Wenwen's Calculator
 
+![](https://i.imgur.com/pKz8zti.jpg)
+
 This is a simple practice of web desigh.  
 The calculator can only do operations between two numbers.  
   
